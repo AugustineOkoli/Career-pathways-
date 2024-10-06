@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Prediction System</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            background-size: cover;
+            background-position: center;
+        }
+        .container {
+            margin-top: 50px;
+            color: white;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+            <center><h2>Career Prediction System </h2></center>
+            <center><p>Answer the questions to predict your career path</p></center>
+        <form action="{%url 'result'%}">
+            {% csrf_token %}
+
+          <!-- Questions for Machine Learning -->
+            <div class="form-group">
+                <label for="ML">Are you good at Machine Learning?</label>
+                <select name="ML" id="ML"  class="form-control" required>
+                  <option value="--">Select</option>
+                  <option value="1">Yes</option>
+                  <option value="0">No</option>
+                </select>
+            </div>
+
+
+           <!-- Questions for Machine Learning Experience -->
+           <div class="form-group">
+              <label for="YOE:ML">How many years of experience do you have in Machine Learning?</label>
+              <input type="number" name="YOE:ML"  class="form-control" required>
+          </div>
+
+          
+          <!-- Questions for Deep Learning -->
+          <div class="form-group">
+            <label for="ML">Are you good at Deep Learning?</label>
+            <select name="DL" id="DL" class="form-control" required>
+              <option value="--">Select</option>
+              <option value="1">Yes</option>
+              <option value="0">No</option>
+            </select>
+          </div>
+
+          <!-- Questions for Deep Learning Experience -->
+          <div class="form-group">
+            <label for="YOE:DL">How many years experience do you have in Deep Learning?</label>
+            <input type="number" name="YOE:DL"  class="form-control" required>
+          </div>
+
+          <!-- Questions for Image processing  -->
+          <div class="form-group">
+            <label for="Image Processing">Are you good at Image Processing?</label>
+            <select name="Image Processing" id="Image Processing" class="form-control" required>
+              <option value="--">Select</option>
+              <option value="1">Yes</option>
+              <option value="0">No</option>
+            </select>
+          </div>
+
+          <!-- Questions for Image Processing Experience -->
+          <div class="form-group">
+            <label for="YOE:Image Processing">How many years experience do you have in image processing?</label>
+            <input type="number" name="YOE:Image Processing" class="form-control" required>
+          </div>
+
+          <!-- Questions for Python   -->
+          <div class="form-group">
+            <label for="Python">Are you good at Python programming language?</label>
+            <select name="Python" id="Python" class="form-control" required>
+              <option value="--">Select</option>
+              <option value="1">Yes</option>
+              <option value="0">No</option>
+            </select>
+          </div>
+
+          <!-- Questions for python Experience -->
+          <div class="form-group">
+              <label for="YOE:python">How many years experience do you have in python programming?</label>
+              <input type="number" name="YOE:python" class="form-control" required>
+          </div>
+
+          <!-- Questions for Java   -->
+          <div class="form-group">
+            <label for="Java">Are you good at Java programming language?</label>
+            <select name="Java" id="Java" class="form-control" required>
+              <option value="--">Select</option>
+              <option value="1">Yes</option>
+              <option value="0">No</option>
+            </select>
+          </div>
+
+
+          <!-- Questions for Java Experience -->
+          <div class="form-group">
+            <label for="YOE:Java">How many years experience do you have in Java programming?</label>
+            <input type="number" name="YOE:Java"  class="form-control" required>
+          </div>
+          
+          <!-- Questions for C   -->
+          <div class="form-group">
+            <label for="C">Are you good at C programming language?</label>
+            <select name="C" id="C" class="form-control" required>
+              <option value="--">Select</option>
+              <option value="1">Yes</option>
+              <option value="0">No</option>
+            </select>
+          </div>
+
+          <!-- Questions for C Experience -->
+          <div class="form-group">
+            <label for="YOE:C">How many years experience do you have in C programming?</label>
+            <input type="number" name="YOE:C"  class="form-control" required>
+          </div>
+
+          <!-- Questions for HTML  -->
+          <div class="form-group">
+            <label for="HTML">Are you good at HTML?</label>
+            <select name="HTML" id="HTML" class="form-control" required>
+              <option value="--">Select</option>
+              <option value="1">Yes</option>
+              <option value="0">No</option>
+            </select>
+          </div>
+
+          <!-- Questions for HTML Experience -->
+          <div class="form-group">
+            <label for="YOE:HTML">How many years experience do you have  in HTML?</label>
+            <input type="number" name="YOE:HTML" class="form-control" required>
+          </div>
+
+          <!-- Questions for CSS  -->
+          <div class="form-group">
+            <label for="CSS">Are you good at CSS?</label>
+            <select name="CSS" id="CSS" class="form-control" required>
+              <option value="--">Select</option>
+              <option value="1">Yes</option>
+              <option value="0">No</option>
+            </select>
+          </div>
+
+          <!-- Questions for CSS Experience -->
+          <div class="form-group">
+            <label for="YOE:CSS">How many years experience do you have  in CSS?</label>
+            <input type="number" name="YOE:CSS" class="form-control" required>
+          </div>
+
+          
+          <!-- Questions for MYSQL  -->
+          <div class="form-group">
+            <label for="MYSQL">Are you good at MYSQL?</label>
+            <select name="MYSQL" id="MYSQL" class="form-control" required>
+              <option value="--">Select</option>
+              <option value="1">Yes</option>
+              <option value="0">No</option>
+            </select>
+          </div>
+
+          <!-- Questions for MYSQL Experience -->
+          <div class="form-group">
+            <label for="YOE:MYSQL">How many years experience do you have  in MYSQL?</label>
+            <input type="number" name="YOE:MYSQL"  class="form-control" required>
+          </div>
+
+          <!-- Questions for NLP  -->
+          <div class="form-group">
+            <label for="NLP">Are you good at Natural Language Processing?</label>
+            <select name="NLP" id="NLP" class="form-control" required>
+              <option value="--">Select</option>
+              <option value="1">Yes</option>
+              <option value="0">No</option>
+            </select>
+          </div>
+
+          <!-- Questions for NLP Experience -->
+          <div class="form-group">
+            <label for="YOE:NLP">How many years experience do you have  in Natural Language Processing?</label>
+            <input type="number" name="YOE:NLP" class="form-control" required>
+          </div>
+
+          <!-- Questions for CGPA -->
+          <div class="form-group">
+            <input type="number" step="any" name="CGPA" id="CGPA" class="form-control" placeholder="Enter CGPA">
+          </div>
+          
+
+
+            <center><button type="submit" class="btn btn-primary">Submit</button></center>
+        </form>
+    </div>
+</body>
+</html>
